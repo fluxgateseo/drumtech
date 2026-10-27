@@ -1,0 +1,16 @@
+// Cloudflare Workers deployment: a static-assets-only Worker serving dist/.
+// `wrangler deploy` runs the build command first, so Workers Builds needs no
+// extra build settings.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "drumtech",
+  "compatibility_date": "2026-10-01",
+  "build": {
+    "command": "npm run build"
+  },
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
