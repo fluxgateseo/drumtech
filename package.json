@@ -1,0 +1,19 @@
+{
+  "name": "drumtech",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Drum Tech (drum-tech.co.uk) — static rebuild: guides to the best drum shops in the UK, drums and drumming accessories.",
+  "type": "module",
+  "scripts": {
+    "import": "node scripts/import-wordpress.mjs",
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "dev": "npm run build && npm run serve"
+  },
+  "dependencies": {
+    "three": "0.160.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
